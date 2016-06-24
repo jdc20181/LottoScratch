@@ -1,0 +1,94 @@
+<!--Code comes from a forum-->
+<html>
+ <head>
+ <title>Lottery Game</title>
+ <SCRIPT LANGUAGE="javascript">
+
+ function genNums(){
+
+ var counter = 0;
+
+    do{
+
+    var num1 = Math.round(5 * Math.random())+1
+    var resultnum1 = document.lottery.Rball1.value = num1
+
+    var num2 = Math.round(5 * Math.random())+1
+    var resultnum2 = document.lottery.Rball2.value = num2
+
+    var num3 = Math.round(5 * Math.random())+1
+    var resultnum3 = document.lottery.Rball3.value = num3
+
+    var num4 = Math.round(5 * Math.random())+1
+    var resultnum4 = document.lottery.Rball4.value = num4
+
+    var num5 = Math.round(5 * Math.random())+1
+    var resultnum5 = document.lottery.Rball5.value = num5
+
+    var num6 = Math.round(5 * Math.random())+1
+    var resultnum6 = document.lottery.Rball6.value = num6
+
+    var enterednum1 = document.lottery.ball1.value;
+    var enterednum2 = document.lottery.ball2.value;
+    var enterednum3 = document.lottery.ball3.value;
+    var enterednum4 = document.lottery.ball4.value;
+    var enterednum5 = document.lottery.ball5.value;
+    var enterednum6 = document.lottery.ball6.value;
+
+    counter = counter + 1;
+
+}while( !((resultnum1 == enterednum1 && resultnum2 == enterednum2 && resultnum3 == enterednum3 && resultnum4 == enterednum4 && resultnum5 == enterednum5 && resultnum6 == enterednum6 ) || counter >= 10000 ) )
+
+
+//alert(counter);
+
+if( resultnum1 == enterednum1 && resultnum2 == enterednum2 && resultnum3 == enterednum3 && resultnum4 == enterednum4 && resultnum5 == enterednum5 && resultnum6 == enterednum6) {
+
+    alert("JackPot!, You Won The Lottery");
+    alert("It took " + counter + " number of loops to get winning numbers")
+    document.bgColor = "lightblue";
+
+}
+else{
+    alert("sorry you did not win after " + counter + " tries");
+}
+
+
+ }
+
+</SCRIPT>
+
+
+
+</head>
+<body>
+
+<Form Name = "lottery">
+
+Lottery Game<br/>
+
+Please enter your six numbers below:<br/>
+
+Ball#1 <Input Type = "text" size = "1" value = "1" name = "ball1"><br/>
+Ball#2 <Input Type = "text" size = "1" value = "2" name = "ball2"><br/>
+Ball#3 <Input Type = "text" size = "1" value = "3" name = "ball3"><br/>
+Ball#4 <Input Type = "text" size = "1" value = "4" name = "ball4"><br/>
+Ball#5 <Input Type = "text" size = "1" value = "5" name = "ball5"><br/>
+Ball#6 <Input Type = "text" size = "1" value = "6" name = "ball6"><br/>
+
+
+<Input Type = "button" value = "Play" onClick = "genNums()"><br/>
+
+Results:<br/>
+
+Result Ball#1 <Input Type = "text" size = "1" name = "Rball1"><br/>
+Result Ball#2 <Input Type = "text" size = "1" name = "Rball2"><br/>
+Result Ball#3 <Input Type = "text" size = "1" name = "Rball3"><br/>
+Result Ball#4 <Input Type = "text" size = "1" name = "Rball4"><br/>
+Result Ball#5 <Input Type = "text" size = "1" name = "Rball5"><br/>
+Result Ball#6 <Input Type = "text" size = "1" name = "Rball6"><br/>
+
+
+</Form>
+</body>
+</html>
